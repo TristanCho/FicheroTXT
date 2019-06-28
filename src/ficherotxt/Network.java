@@ -37,6 +37,8 @@ public class Network extends javax.swing.JFrame {
       jtf_RemoteServer2.setText(DatosConfig.dimeRemoteServer2());
       
       
+     // DatosConfig.setUser(UserDDBB);
+      
       /*
       InputStream Archivo;
 
@@ -51,8 +53,6 @@ public class Network extends javax.swing.JFrame {
         }*/  
     }
     
-
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -286,6 +286,8 @@ public class Network extends javax.swing.JFrame {
         jtf_LocalServer.setEnabled(true);
         jtf_RemoteServer.setEnabled(true);
         jtf_RemoteServer2.setEnabled(true);
+        
+        
         
     }//GEN-LAST:event_btn_EditarActionPerformed
 
