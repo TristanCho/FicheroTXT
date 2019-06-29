@@ -19,14 +19,17 @@ import javax.swing.JTextField;
 public class Network extends javax.swing.JFrame {
     
     private final VariablesConfig DatosConfig;
-    
+    //private final CapturaForm CapturaForm1;
     public Network() {
         initComponents();
         
       DatosConfig = new VariablesConfig();
+      //DatosCaptura = new CapturaForm();
         System.out.println("Base datos="+DatosConfig.DDBB);
       
       Properties Propiedades = new Properties();
+      
+      
       
       jtf_UserDDBB.setText(DatosConfig.dimeUser());
       jtf_PassDDBB.setText(DatosConfig.dimePass());
@@ -35,10 +38,16 @@ public class Network extends javax.swing.JFrame {
       jtf_LocalServer.setText(DatosConfig.dimeLocalServer());
       jtf_RemoteServer.setText(DatosConfig.dimeRemoteServer());
       jtf_RemoteServer2.setText(DatosConfig.dimeRemoteServer2());
+      String UserDDBB = jtf_UserDDBB.getText();
       
+     DatosConfig.setUser(UserDDBB);
       
-     // DatosConfig.setUser(UserDDBB);
-      
+         
+        //System.out.println( "La nueva variables es: "+jtf_UserDDBB.getText());
+     
+     
+     
+     
       /*
       InputStream Archivo;
 
@@ -50,9 +59,14 @@ public class Network extends javax.swing.JFrame {
           
         } catch (IOException ex) {
             System.out.println("Revisar la ruta del Archivo de propiedades");
-        }*/  
+        }*/ 
+   
+      
+      
     }
     
+   
+       
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -292,7 +306,7 @@ public class Network extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_EditarActionPerformed
 
     private void btn_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GuardarActionPerformed
-                 
+          //import        
         jtf_UserDDBB.setEnabled(false);
         jtf_PassDDBB.setEnabled(false);
         jtf_DDBB.setEnabled(false);
@@ -300,7 +314,13 @@ public class Network extends javax.swing.JFrame {
         jtf_LocalServer.setEnabled(false);
         jtf_RemoteServer.setEnabled(false);
         jtf_RemoteServer2.setEnabled(false);
-        //
+        
+        String UserDDBB=jtf_UserDDBB.getText();
+        
+
+//CapturaForm();
+         
+    
        
     }//GEN-LAST:event_btn_GuardarActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -322,4 +342,11 @@ public class Network extends javax.swing.JFrame {
     public javax.swing.JTextField jtf_RemoteServer2;
     public javax.swing.JTextField jtf_UserDDBB;
     // End of variables declaration//GEN-END:variables
+public class CapturaForm{
+       public CapturaForm(String UserDDBB){
+            System.out.println("El UserDDBB es...."+ UserDDBB);
+       }
+    }
+ 
 }
+ 

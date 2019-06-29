@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import ficherotxt.Network;
 import java.awt.TextField;
+import java.io.OutputStream;
 
 public class VariablesConfig {
    public String DDBB;
@@ -33,6 +34,7 @@ public class VariablesConfig {
 
         //Declara objeto lectura de Archivo
         InputStream Archivo;
+        
 
         try {
             Archivo = new FileInputStream("src/Archivador/ArchivoPropiedades.properties");
@@ -66,6 +68,9 @@ public String dimeUser(){
      return UserDDBB;
  } 
 public void setUser(String UserDDBB){//Reflejar los cambios de usuario en Properties desde boton guardar.. 
+    this.UserDDBB=UserDDBB;
+ } 
+public void setUsuario(String UserDDBB){//Reflejar los cambios de usuario en Properties desde boton guardar.. 
     this.UserDDBB=UserDDBB;
  } 
 public String dimePass(){
