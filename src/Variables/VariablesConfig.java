@@ -69,6 +69,7 @@ public String dimeUser(){
  } 
 public void setUser(String UserDDBB){//Reflejar los cambios de usuario en Properties desde boton guardar.. 
     this.UserDDBB=UserDDBB;
+    System.out.println("User desde el formulario: "+UserDDBB);
  } 
 public void setUsuario(String UserDDBB){//Reflejar los cambios de usuario en Properties desde boton guardar.. 
     this.UserDDBB=UserDDBB;

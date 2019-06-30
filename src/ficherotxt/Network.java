@@ -1,19 +1,8 @@
 
-
-/////   REVISAR LA CLASE GUARDAR PARA SETEAR DE NUEVO LA VARIABLE DE PRUEBA PUERTO//////////////////////////
-//Test 14:57
 package ficherotxt;
 
 import Variables.VariablesConfig;
-import java.io.FileInputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.Principal;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JTextField;
 
 
 public class Network extends javax.swing.JFrame {
@@ -29,8 +18,7 @@ public class Network extends javax.swing.JFrame {
       
       Properties Propiedades = new Properties();
       
-      
-      
+     
       jtf_UserDDBB.setText(DatosConfig.dimeUser());
       jtf_PassDDBB.setText(DatosConfig.dimePass());
       jtf_DDBB.setText(DatosConfig.dimeDDBB());
@@ -40,10 +28,10 @@ public class Network extends javax.swing.JFrame {
       jtf_RemoteServer2.setText(DatosConfig.dimeRemoteServer2());
       String UserDDBB = jtf_UserDDBB.getText();
       
-     DatosConfig.setUser(UserDDBB);
+     //DatosConfig.setUser(UserDDBB);
       
          
-        //System.out.println( "La nueva variables es: "+jtf_UserDDBB.getText());
+       
      
      
      
@@ -201,7 +189,7 @@ public class Network extends javax.swing.JFrame {
                         .addComponent(jtf_PassDDBB, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jtf_UserDDBB, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btn_Guardar))
-                .addContainerGap(718, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,7 +226,7 @@ public class Network extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_Editar)
                     .addComponent(btn_Guardar))
-                .addContainerGap(329, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         jtf_UserDDBB.getAccessibleContext().setAccessibleDescription("");
@@ -250,14 +238,14 @@ public class Network extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();
@@ -316,9 +304,11 @@ public class Network extends javax.swing.JFrame {
         jtf_RemoteServer2.setEnabled(false);
         
         String UserDDBB=jtf_UserDDBB.getText();
+       
+        DatosConfig.setUser(UserDDBB);
         
-
-//CapturaForm();
+      
+//CapturaForm(UserDDBB);
          
     
        
