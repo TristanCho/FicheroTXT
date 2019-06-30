@@ -1,4 +1,7 @@
 
+//https://www.youtube.com/watch?v=UGJbE84MUko
+//https://www.youtube.com/watch?v=R5uvGiGTnlA
+
 package ficherotxt;
 
 import Variables.VariablesConfig;
@@ -8,12 +11,12 @@ import java.util.Properties;
 public class Network extends javax.swing.JFrame {
     
     private final VariablesConfig DatosConfig;
-    //private final CapturaForm CapturaForm1;
+    //private final Guardar CapturaForm1;
     public Network() {
         initComponents();
         
       DatosConfig = new VariablesConfig();
-      //DatosCaptura = new CapturaForm();
+      //DatosCaptura = new Guardar();
         System.out.println("Base datos="+DatosConfig.DDBB);
       
       Properties Propiedades = new Properties();
@@ -26,9 +29,17 @@ public class Network extends javax.swing.JFrame {
       jtf_LocalServer.setText(DatosConfig.dimeLocalServer());
       jtf_RemoteServer.setText(DatosConfig.dimeRemoteServer());
       jtf_RemoteServer2.setText(DatosConfig.dimeRemoteServer2());
-      String UserDDBB = jtf_UserDDBB.getText();
       
-     //DatosConfig.setUser(UserDDBB);
+      
+      String UserDDBB = jtf_UserDDBB.getText();
+      String PassDDBB = jtf_PassDDBB.getText();
+      String DDBB = jtf_DDBB.getText();
+      String Puerto = jtf_Puerto.getText();
+      String LocalServer = jtf_LocalServer.getText();
+      String RemoteServer = jtf_RemoteServer.getText();
+      String RemoteServer2 = jtf_RemoteServer2.getText();
+      
+     //DatosConfig.setFormulario(UserDDBB);
       
          
        
@@ -304,13 +315,17 @@ public class Network extends javax.swing.JFrame {
         jtf_RemoteServer2.setEnabled(false);
         
         String UserDDBB=jtf_UserDDBB.getText();
-       
-        DatosConfig.setUser(UserDDBB);
+        String PassDDBB=jtf_PassDDBB.getText();
+        String DDBB=jtf_DDBB.getText();
+        String Puerto=jtf_Puerto.getText();
+        String LocalServer=jtf_LocalServer.getText();
+        String RemoteServer=jtf_RemoteServer.getText();
+        String RemoteServer2=jtf_RemoteServer2.getText();
         
-      
-//CapturaForm(UserDDBB);
+        
+       
+        DatosConfig.setFormulario(UserDDBB,PassDDBB,DDBB,Puerto,LocalServer,RemoteServer,RemoteServer2);
          
-    
        
     }//GEN-LAST:event_btn_GuardarActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -332,11 +347,7 @@ public class Network extends javax.swing.JFrame {
     public javax.swing.JTextField jtf_RemoteServer2;
     public javax.swing.JTextField jtf_UserDDBB;
     // End of variables declaration//GEN-END:variables
-public class CapturaForm{
-       public CapturaForm(String UserDDBB){
-            System.out.println("El UserDDBB es...."+ UserDDBB);
-       }
-    }
+
  
 }
  

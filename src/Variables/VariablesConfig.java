@@ -9,9 +9,9 @@ import java.security.Principal;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import ficherotxt.Network;
-import java.awt.TextField;
-import java.io.OutputStream;
+//import ficherotxt.Network;
+//import java.awt.TextField;
+//import java.io.OutputStream;
 
 public class VariablesConfig {
    public String DDBB;
@@ -27,15 +27,12 @@ public class VariablesConfig {
    
  public VariablesConfig(){
      
-     this.UserDDBB = UserDDBB;
-     System.out.println("Prueba Desde VariablesConfig");
-      //Declara objeto para las Propiedades
+         //Declara objeto para las Propiedades
         Properties Propiedades = new Properties();
 
         //Declara objeto lectura de Archivo
         InputStream Archivo;
-        
-
+       
         try {
             Archivo = new FileInputStream("src/Archivador/ArchivoPropiedades.properties");
             Propiedades.load(Archivo);
@@ -67,13 +64,21 @@ public class VariablesConfig {
 public String dimeUser(){
      return UserDDBB;
  } 
-public void setUser(String UserDDBB){//Reflejar los cambios de usuario en Properties desde boton guardar.. 
+public void setFormulario(String UserDDBB, String PassDDBB,String DDBB,String Puerto,String LocalServer,String RemoteServer,String RemoteServer2){
+     
     this.UserDDBB=UserDDBB;
+    this.PassDDBB=PassDDBB;
+    this.DDBB=DDBB;
+    this.Puerto=Puerto;
+    this.LocalServer=LocalServer;
+    this.RemoteServer=RemoteServer;
+    this.RemoteServer2=RemoteServer2;
+    
+    //                  !!!!!!!!!!!    Reflejar los cambios de usuario en Properties desde boton guardar.. 
+    
     System.out.println("User desde el formulario: "+UserDDBB);
  } 
-public void setUsuario(String UserDDBB){//Reflejar los cambios de usuario en Properties desde boton guardar.. 
-    this.UserDDBB=UserDDBB;
- } 
+ 
 public String dimePass(){
      return PassDDBB;
  } 
@@ -95,7 +100,17 @@ public String dimeDDBB(){
      return RemoteServer2;
  } 
  
-
+ public void Guardar(String UserDDBB){
+     this.UserDDBB=UserDDBB;
+            System.out.println("Boton Guardar Presionado= "+UserDDBB);
+       }
+ 
+ 
+//public class Guardar{
+      // public Guardar(String UserDDBB){
+          //  System.out.println("Boton Guardar Presionado= "+UserDDBB);
+      // }
+   // }
  
  /*
     public void Lectura(Network nw) {
