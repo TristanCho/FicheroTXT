@@ -7,7 +7,6 @@ package ficherotxt;
 import Variables.VariablesConfig;
 import java.util.Properties;
 
-
 public class Network extends javax.swing.JFrame {
     
     private final VariablesConfig DatosConfig;
@@ -16,8 +15,7 @@ public class Network extends javax.swing.JFrame {
         initComponents();
         
       DatosConfig = new VariablesConfig();
-           
-           
+         
       jtf_UserDDBB.setText(DatosConfig.dimeUser());
       jtf_PassDDBB.setText(DatosConfig.dimePass());
       jtf_DDBB.setText(DatosConfig.dimeDDBB());
@@ -26,7 +24,6 @@ public class Network extends javax.swing.JFrame {
       jtf_RemoteServer.setText(DatosConfig.dimeRemoteServer());
       jtf_RemoteServer2.setText(DatosConfig.dimeRemoteServer2());
       
-   
     }
     
     @SuppressWarnings("unchecked")
