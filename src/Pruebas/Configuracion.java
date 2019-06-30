@@ -1,3 +1,4 @@
+//21:11
 package Pruebas;
 
 public class Configuracion {
