@@ -2,6 +2,8 @@
 //https://www.youtube.com/watch?v=UGJbE84MUko
 //https://www.youtube.com/watch?v=R5uvGiGTnlA
 
+//21:11
+
 package ficherotxt;
 
 import Variables.VariablesConfig;
