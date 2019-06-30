@@ -11,17 +11,13 @@ import java.util.Properties;
 public class Network extends javax.swing.JFrame {
     
     private final VariablesConfig DatosConfig;
-    //private final Guardar CapturaForm1;
+    
     public Network() {
         initComponents();
         
       DatosConfig = new VariablesConfig();
-      //DatosCaptura = new Guardar();
-        System.out.println("Base datos="+DatosConfig.DDBB);
-      
-      Properties Propiedades = new Properties();
-      
-     
+           
+           
       jtf_UserDDBB.setText(DatosConfig.dimeUser());
       jtf_PassDDBB.setText(DatosConfig.dimePass());
       jtf_DDBB.setText(DatosConfig.dimeDDBB());
@@ -30,42 +26,9 @@ public class Network extends javax.swing.JFrame {
       jtf_RemoteServer.setText(DatosConfig.dimeRemoteServer());
       jtf_RemoteServer2.setText(DatosConfig.dimeRemoteServer2());
       
-      
-      String UserDDBB = jtf_UserDDBB.getText();
-      String PassDDBB = jtf_PassDDBB.getText();
-      String DDBB = jtf_DDBB.getText();
-      String Puerto = jtf_Puerto.getText();
-      String LocalServer = jtf_LocalServer.getText();
-      String RemoteServer = jtf_RemoteServer.getText();
-      String RemoteServer2 = jtf_RemoteServer2.getText();
-      
-     //DatosConfig.setFormulario(UserDDBB);
-      
-         
-       
-     
-     
-     
-     
-      /*
-      InputStream Archivo;
-
-        try {
-            Archivo = new FileInputStream("src/Archivador/ArchivoPropiedades.properties");
-            Propiedades.load(Archivo);
-            
-            System.out.println("Prueba desde network 12");
-          
-        } catch (IOException ex) {
-            System.out.println("Revisar la ruta del Archivo de propiedades");
-        }*/ 
    
-      
-      
     }
     
-   
-       
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -300,12 +263,11 @@ public class Network extends javax.swing.JFrame {
         jtf_RemoteServer.setEnabled(true);
         jtf_RemoteServer2.setEnabled(true);
         
-        
-        
+      
     }//GEN-LAST:event_btn_EditarActionPerformed
 
     private void btn_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GuardarActionPerformed
-          //import        
+               
         jtf_UserDDBB.setEnabled(false);
         jtf_PassDDBB.setEnabled(false);
         jtf_DDBB.setEnabled(false);
@@ -322,11 +284,8 @@ public class Network extends javax.swing.JFrame {
         String RemoteServer=jtf_RemoteServer.getText();
         String RemoteServer2=jtf_RemoteServer2.getText();
         
-        
-       
         DatosConfig.setFormulario(UserDDBB,PassDDBB,DDBB,Puerto,LocalServer,RemoteServer,RemoteServer2);
-         
-       
+      
     }//GEN-LAST:event_btn_GuardarActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Editar;
