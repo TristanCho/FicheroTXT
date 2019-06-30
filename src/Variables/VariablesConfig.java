@@ -24,11 +24,11 @@ public class VariablesConfig {
    public String NuevoPuerto;
    
 
-   
+   Properties Propiedades = new Properties();
  public VariablesConfig(){
      
          //Declara objeto para las Propiedades
-        Properties Propiedades = new Properties();
+        
 
         //Declara objeto lectura de Archivo
         InputStream Archivo;
@@ -51,7 +51,7 @@ public class VariablesConfig {
          Puerto = Propiedades.getProperty("Puerto");
          System.out.println("Puerto Desde VariablesConfig="+Puerto);
          
-              
+          /*    
          try {
             //Graba el Archivo con las modificaciones realizadas
             Propiedades.store(new FileWriter("src/Archivador/ArchivoPropiedades.properties"), "Propiedades Actualizadas Correctamente");
@@ -59,7 +59,7 @@ public class VariablesConfig {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-     
+     */
  }
 public String dimeUser(){
      return UserDDBB;
@@ -73,6 +73,23 @@ public void setFormulario(String UserDDBB, String PassDDBB,String DDBB,String Pu
     this.LocalServer=LocalServer;
     this.RemoteServer=RemoteServer;
     this.RemoteServer2=RemoteServer2;
+    
+     try {
+         
+         //Despliega cada una de las Propiedades
+         System.out.println("Usuario antes de Grabar: "+UserDDBB);
+        Propiedades.setProperty("UserDDBB",UserDDBB);
+        Propiedades.setProperty("PassDDBB",PassDDBB);
+        Propiedades.setProperty("DDBB",DDBB);
+        Propiedades.getProperty("Puerto",Puerto);
+        Propiedades.getProperty("LocalServer",LocalServer);
+        Propiedades.getProperty("RemoteServer",RemoteServer);
+        Propiedades.getProperty("RemoteServer2",RemoteServer2);
+            //Graba el Archivo con las modificaciones realizadas
+            Propiedades.store(new FileWriter("src/Archivador/ArchivoPropiedades.properties"), "Propiedades Actualizadas Correctamente");
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
     
     //                  !!!!!!!!!!!    Reflejar los cambios de usuario en Properties desde boton guardar.. 
     
